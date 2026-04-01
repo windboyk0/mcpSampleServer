@@ -15,12 +15,8 @@ if __name__ == "__main__":
     # claude_desktop_config.json 에 command/args 로 등록
     # mcp.run()
 
-    # [Streamable HTTP 방식] HTTP 서버로 실행
+    # [Streamable HTTP 방식] HTTP 서버로 실행 (최신 MCP 트랜스포트)
     # 로컬:       http://localhost:8000/mcp
     # Codespaces: https://<codespace-name>-8000.app.github.dev/mcp
-    # mcp.run(transport="streamable-http")
-
-    # [SSE 방식] Claude Desktop 원격 연결 시 사용
-    # 로컬:       http://localhost:8000/sse
-    # Codespaces: https://<codespace-name>-8000.app.github.dev/sse
-    mcp.run(transport="sse")
+    #             (Codespaces 포트 탭에서 8000번 포트를 Public으로 설정 필요)
+    mcp.run(transport="streamable-http")
